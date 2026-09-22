@@ -40,6 +40,8 @@ A window will open showing a triangle with continuously shifting colors.
 ### How it works
 Three vertices are defined, each carrying a 2D position and an RGB color, packed into a single NumPy array and uploaded to the GPU via `self.ctx.buffer(...)`. The vertex shader passes position and color through unchanged; the fragment shader receives the interpolated color for each pixel and modulates its red and blue channels using `sin(time)` and `cos(time)`, where `time` is passed in every frame as a shader uniform. The main render loop must be named `render(self, time, frame_time)` — `moderngl-window` calls this exact method name each frame; naming it anything else (e.g. `on_render`) means nothing gets drawn, with no error raised.
 
+Note: This project was developed with AI assistance as part of my learning process
+
 ---
 
 ## 🇩🇪 Deutsch
@@ -74,6 +76,8 @@ Ein Fenster öffnet sich mit einem Dreieck, dessen Farben sich kontinuierlich ve
 ### Funktionsweise
 Drei Vertices werden definiert, jeweils mit einer 2D-Position und einer RGB-Farbe, gepackt in ein einzelnes NumPy-Array und über `self.ctx.buffer(...)` auf die GPU hochgeladen. Der Vertex-Shader gibt Position und Farbe unverändert weiter; der Fragment-Shader empfängt die interpolierte Farbe für jedes Pixel und moduliert dessen roten und blauen Kanal mit `sin(time)` und `cos(time)`, wobei `time` jeden Frame als Shader-Uniform übergeben wird. Die Haupt-Render-Schleife muss `render(self, time, frame_time)` heißen — `moderngl-window` ruft genau diesen Methodennamen bei jedem Frame auf; wird sie anders benannt (z. B. `on_render`), wird nichts gezeichnet, ohne dass ein Fehler ausgelöst wird.
 
+Hinweis: Dieses Projekt wurde im Rahmen meines Lernprozesses mit KI-Unterstützung entwickelt
+
 ---
 
 ## 🇹🇷 Türkçe
@@ -107,3 +111,5 @@ Renkleri sürekli değişen bir üçgen gösteren bir pencere açılır.
 
 ### Nasıl çalışır?
 Her biri 2D pozisyon ve RGB renk taşıyan üç vertex tanımlanır, tek bir NumPy dizisine paketlenir ve `self.ctx.buffer(...)` aracılığıyla GPU'ya yüklenir. Vertex shader, pozisyon ve rengi değiştirmeden aktarır; fragment shader her piksel için interpolasyona uğramış rengi alır ve kırmızı ile mavi kanallarını `sin(time)` ve `cos(time)` ile modüle eder, `time` değeri her karede bir shader uniform'u olarak geçirilir. Ana render döngüsü `render(self, time, frame_time)` adında olmalıdır — `moderngl-window` her karede tam olarak bu metod adını çağırır; farklı bir isim verilirse (örn. `on_render`), hiçbir hata verilmeden hiçbir şey çizilmez.
+
+Not: Bu proje öğrenme sürecimin bir parçası olarak yapay zeka desteğiyle geliştirilmiştir
